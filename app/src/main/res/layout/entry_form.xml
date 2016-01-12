@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#c9f28b"
+
+            android:text="Today is: "
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/event"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:background="#f4cdb3"
+            android:text="What Happened?" />
+
+        <EditText
+            android:id="@+id/userEvent"
+            style="@style/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp" />
+
+        <TextView
+            android:id="@+id/feeling"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userEvent"
+            android:layout_weight="3"
+            android:background="#a3a9ed"
+            android:text="I felt mostly: " />
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feeling">
+
+                <RadioButton
+                    android:id="@+id/happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/happy"
+                    android:text="Happy"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/sad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/sad"
+                    android:text="Sad"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/lonely"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/lonely"
+                    android:text="Lonely"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/nervous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/nervous"
+                    android:text="Nervous"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/excited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/excited"
+                    android:text="Excited"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/guilty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/guilty"
+                    android:text="Guilty"
+                    android:textSize="18dp" />
+
+
+                <RadioButton
+                    android:id="@+id/embarrassed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/embarrassed"
+                    android:text="Embarrassed"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/angry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/angry"
+                    android:text="Angry"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/stressed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/stressed"
+                    android:text="Stressed"
+                    android:textSize="18dp" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/feelingb"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userEvent"
+            android:layout_weight="3"
+            android:background="#a3a9ed"
+            android:text="But also a little:" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feeling"
+            android:paddingLeft="200dp"
+            android:paddingRight="20dp">
+
+
+            <RadioButton
+                android:id="@+id/happyb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/happy"
+                android:text="Happy"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/sadb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/sad"
+                android:text="Sad"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/lonelyb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/lonely"
+                android:text="Lonely"
+                android:textSize="18dp" />
+
+
+            <RadioButton
+                android:id="@+id/nervousb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/nervous"
+                android:text="Nervous"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/excitedb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/excited"
+                android:text="Excited"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/guiltyb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/guilty"
+                android:text="Guilty"
+                android:textSize="18dp" />
+
+
+            <RadioButton
+                android:id="@+id/embarrassedb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/embarrassed"
+                android:text="Embarrassed"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/angryb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/angry"
+                android:text="Angry"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/stressedb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/stressed"
+                android:text="Stressed"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/rate"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff80"
+            android:text="Feelings Thermometer" />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/moodPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="35dp"/>
+
+        <SeekBar
+            android:id="@+id/moodBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/moodPic"
+            android:layout_alignBottom="@id/moodPic"
+            android:minWidth="350dp"
+            android:rotation="270" />
+<!--<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="right">-->
+        <TextView
+            android:id="@+id/feelingsThermo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1d0e4d"
+            android:paddingTop="15dp"
+            android:layout_alignParentRight="true"
+            android:textSize="30dp" /></RelativeLayout><!--
+</LinearLayout>-->
+
+
+        <TextView
+            android:id="@+id/action"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d2a9fd"
+            android:text="What I did:" />
+
+        <EditText
+            android:id="@+id/userAction"
+            style="@style/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp" />
+
+        <TextView
+            android:id="@+id/thought"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9ecfc7"
+            android:text="What I thought to myself:" />
+
+        <EditText
+            android:id="@+id/userThought"
+            style="@style/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp" />
+
+        <TextView
+            android:id="@+id/help"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dbff71"
+            android:text="Did my thoughts help me?" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yesNo"
+            android:orientation="horizontal"
+            android:minHeight="100dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes"
+                android:textSize="30dp"
+                android:text="YES"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no"
+                android:textSize="30dp"
+                android:text="NO"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/nextThoughts"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff8984"
+            android:text="Next time I will: " />
+
+        <EditText
+            android:id="@+id/userNextThoughts"
+            style="@style/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp" />
+
+        <Button
+            android:id="@+id/submitButton"
+            style="@style/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#91fdf8"
+            android:onClick=""
+            android:text="Submit Entry" />
+
+
+    </LinearLayout>
+</ScrollView>
