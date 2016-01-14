@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class Database extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME ="TherapyDatabase";
+    public static final String DATABASE_NAME = "TherapyDatabase";
     public static final int DATABASE_VERSION = 1;
     public static final String ENTRY_TABLE_NAME = "Entry";
     public static final String ENTRY_COLUMN_ID = "_id";
@@ -26,7 +26,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String ENTRY_COLUMN_NEXT_TOUGHT = "NextThought";
 
 
-    public Database(Context context){
+    public Database(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -36,10 +36,10 @@ public class Database extends SQLiteOpenHelper {
                 ENTRY_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + ENTRY_COLUMN_DATE + " TEXT, " +
                 ENTRY_COLUMN_EVENT + " TEXT, " + ENTRY_COLUMN_FEELING + " TEXT, " + ENTRY_COLUMN_FEELINGB + " TEXT, " +
                 ENTRY_COLUMN_RATE + " INTEGER, " + ENTRY_COLUMN_ACTION + " TEXT, " +
-                ENTRY_COLUMN_THOUGHT + " TEXT, "+  ENTRY_COLUMN_YESNO + " TEXT, " + ENTRY_COLUMN_NEXT_TOUGHT + " TEXT)");
+                ENTRY_COLUMN_THOUGHT + " TEXT, " + ENTRY_COLUMN_YESNO + " TEXT, " + ENTRY_COLUMN_NEXT_TOUGHT + " TEXT)");
     }
 
-    public boolean insertEntry( String date, String event, String feeling, String feelingb, String rate, String action, String thought, String yesNo, String nextThought){
+    public boolean insertEntry(String date, String event, String feeling, String feelingb, String rate, String action, String thought, String yesNo, String nextThought) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(ENTRY_COLUMN_DATE, date);
@@ -57,17 +57,16 @@ public class Database extends SQLiteOpenHelper {
 
     public Cursor getEntry(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery( "SELECT * FROM " + ENTRY_TABLE_NAME + " WHERE " +
-                ENTRY_COLUMN_ID + "=?", new String[] { Integer.toString(id) } );
+        Cursor res = db.rawQuery("SELECT * FROM " + ENTRY_TABLE_NAME + " WHERE " +
+                ENTRY_COLUMN_ID + "=?", new String[]{Integer.toString(id)});
         return res;
     }
 
     public Cursor getAllEntries() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery( "SELECT * FROM " + ENTRY_TABLE_NAME, null );
+        Cursor res = db.rawQuery("SELECT * FROM " + ENTRY_TABLE_NAME, null);
         return res;
     }
-
 
 
     @Override

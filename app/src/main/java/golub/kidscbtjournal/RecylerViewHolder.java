@@ -10,16 +10,18 @@ import android.widget.TextView;
 public class RecylerViewHolder extends RecyclerView.ViewHolder {
 
     private TextView date;
+    private TextView feeling;
 
 
     public RecylerViewHolder(View itemView) {
         super(itemView);
-        date = (TextView)itemView.findViewById(R.id.date);
-
+        date = (TextView) itemView.findViewById(R.id.date);
+        feeling = (TextView) itemView.findViewById(R.id.feeling);
     }
 
-    public void bind(JournalEntry entry){
+    public void bind(JournalEntry entry) {
         date.setText(entry.getDate());
+        feeling.setText(entry.getFeeling());
 
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KidsCBTJournal</string>
+    <string name="what_happened"><u>What Happened?</u></string>
 </resources>

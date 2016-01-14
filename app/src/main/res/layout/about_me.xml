@@ -1,31 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
+    android:layout_height="wrap_content">
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About Me"/>
-    <TextView
+        android:text="About Me"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:minHeight="75dp"
+        android:id="@+id/Me"/>
+    <View
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:background="#123456"
+        android:layout_below="@id/Me"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"/>
+    <ImageView android:id="@+id/userPic"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="My name is: "/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:minHeight="200dp"
+        android:minWidth="200dp"
+        android:layout_below="@id/Me"
+        android:layout_alignParentRight="true"/>
+
+    <Button android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userPic"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="Take Photo"></Button>
+
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am "/>
+        android:layout_below="@id/Me"
+        android:layout_marginLeft="50dp"
+        android:textSize="25sp"
+        android:text="My name is: "
+        android:minHeight="46dp"
+        android:id="@+id/name"/>
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/userName"
+        android:minWidth="100dp"
+        android:layout_below="@id/Me"
+        android:layout_toRightOf="@id/name"
+        android:layout_alignBottom="@id/name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginLeft="50dp"
+        android:text="I am "
+        android:minHeight="46dp"
+        android:layout_below="@id/name"
+        android:id="@+id/Iam"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:layout_toRightOf="@id/Iam"
+        android:textSize="25sp"
+        android:inputType="number"
+        android:layout_below="@id/name"
+        android:layout_alignBottom="@id/Iam"
+        android:id="@+id/age"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-        android:text=" years old."/>
+        android:text=" years old."
+        android:layout_toRightOf="@id/age"
+        android:textSize="25sp"
+        android:layout_below="@id/name"
+        android:minHeight="46dp"
+        android:id="@+id/yearsOld"/>
     <TextView
-        android:layout_width=""
-        android:layout_height="" />
-</RelativeLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ihave"
+        android:text="I have "
+        android:layout_below="@id/Iam"
+        android:layout_marginLeft="50dp"
+        android:minHeight="46dp"
+        android:textSize="25sp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hairColor"
+        android:layout_toRightOf="@id/Ihave"
+        android:minWidth="100dp"
+        android:textSize="25dp"
+        android:layout_below="@id/Iam"
+        android:layout_alignBottom="@id/Ihave"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/Ihave"
+        android:id="@+id/hair"
+        android:text="hair and "
+        android:layout_toRightOf="@id/hairColor"
+        android:minHeight="46dp"
+        android:textSize="25sp"
+        android:layout_below="@id/Iam"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eyeColor"
+        android:minWidth="100dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="25sp"
+        android:layout_below="@id/Ihave"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eye"
+        android:text="eyes."
+        android:layout_toRightOf="@id/eyeColor"
+        android:minHeight="46dp"
+        android:layout_below="@id/Ihave"
+        android:layout_alignBottom="@id/eyeColor"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About my family:"
+        android:id="@+id/family"
+        android:layout_below="@id/eyeColor"
+        android:textSize="25sp"
+        android:layout_marginLeft="50dp"
+        android:minHeight="46dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/familyInput"
+        android:layout_below="@id/eyeColor"
+        android:layout_marginLeft="50dp"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:minWidth="250dp"
+        android:minHeight="100dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorite"
+        android:text="My favorite:"
+        android:layout_below="@id/familyInput"
+        android:minHeight="46dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/color"
+        android:text="Color: "
+        android:textSize="25sp"
+        android:layout_below="@id/favorite"
+        android:minHeight="46dp"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/color"
+        android:id="@+id/userColor"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/color"
+        android:layout_below="@id/favorite"
+        android:minWidth="100dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:id="@+id/book"
+        android:text="Book: "
+        android:textSize="25sp"
+        android:layout_below="@id/color"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/book"
+        android:minWidth="100dp"
+        android:id="@+id/userBook"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/book"
+        android:layout_below="@id/color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:id="@+id/sport"
+        android:text="Sport: "
+        android:textSize="25sp"
+        android:layout_below="@id/book"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sport"
+        android:minWidth="100dp"
+        android:id="@+id/userSport"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/sport"
+        android:layout_below="@id/book"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:id="@+id/food"
+        android:text="Food: "
+        android:textSize="25sp"
+        android:layout_below="@id/sport"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/food"
+        android:minWidth="100dp"
+        android:id="@+id/userFood"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/food"
+        android:layout_below="@id/sport"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:id="@+id/animal"
+        android:text="Animal: "
+        android:textSize="25sp"
+        android:layout_below="@id/food"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/animal"
+        android:minWidth="100dp"
+        android:id="@+id/userAnimal"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/animal"
+        android:layout_below="@id/food"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="46dp"
+        android:id="@+id/subject"
+        android:text="Subject: "
+        android:textSize="25sp"
+        android:layout_below="@id/animal"
+        android:layout_marginLeft="50dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/subject"
+        android:minWidth="100dp"
+        android:id="@+id/userSubject"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/subject"
+        android:layout_below="@id/animal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userSubject"
+        android:layout_centerInParent="true"
+        android:paddingTop="15dp"
+        android:text="Close"
+        android:id="@+id/close"/>
+
+
+
+
+</RelativeLayout></ScrollView>

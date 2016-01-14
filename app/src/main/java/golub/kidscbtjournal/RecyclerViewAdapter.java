@@ -14,10 +14,10 @@ import java.util.ArrayList;
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecylerViewHolder> {
 
-    private ArrayList<JournalEntry>entries;
+    private ArrayList<JournalEntry> entries;
 
 
-    public RecyclerViewAdapter(ArrayList<JournalEntry> list){
+    public RecyclerViewAdapter(ArrayList<JournalEntry> list) {
         this.entries = list;
     }
 
@@ -32,7 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecylerViewHolder>
     public void onBindViewHolder(final RecylerViewHolder holder, final int position) {
         holder.bind(entries.get(position));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

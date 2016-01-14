@@ -49,65 +49,78 @@
             android:text="I felt mostly: " />
 
 
-        <RadioGroup
+      <!--  <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/feeling">
+            android:paddingLeft="200dp">-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/happy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/happy"
+                    android:button="@drawable/happy_button"
                     android:text="Happy"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"/>
 
                 <RadioButton
                     android:id="@+id/sad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/sad"
+                    android:button="@drawable/sad_button"
                     android:text="Sad"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/happy"
+                    android:layout_marginLeft="100dp"/>
 
                 <RadioButton
                     android:id="@+id/lonely"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/lonely"
+                    android:button="@drawable/lonely_button"
                     android:text="Lonely"
-                    android:textSize="18dp" />
-
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/sad"
+                    android:layout_marginLeft="100dp"/>
                 <RadioButton
                     android:id="@+id/nervous"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/nervous"
+                    android:button="@drawable/nervous_button"
                     android:text="Nervous"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_below="@id/happy"/>
 
                 <RadioButton
                     android:id="@+id/excited"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/excited"
+                    android:button="@drawable/excited_button"
                     android:text="Excited"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/nervous"
+                    android:layout_below="@id/sad"
+                    android:layout_alignLeft="@id/sad"/>
 
                 <RadioButton
                     android:id="@+id/guilty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/guilty"
+                    android:button="@drawable/guilty_button"
                     android:text="Guilty"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/excited"
+                    android:layout_below="@id/lonely"
+                    android:layout_alignLeft="@id/lonely"/>
 
 
                 <RadioButton
@@ -115,30 +128,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/embarrassed"
+                    android:button="@drawable/embarrassed_button"
                     android:text="Embarrassed"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_below="@id/nervous"/>
 
                 <RadioButton
                     android:id="@+id/angry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/angry"
+                    android:button="@drawable/angry_button"
                     android:text="Angry"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/embarrassed"
+                    android:layout_below="@id/excited"
+                    android:layout_alignLeft="@id/sad"/>
 
                 <RadioButton
                     android:id="@+id/stressed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:button="@drawable/stressed"
+                    android:button="@drawable/stressed_button"
                     android:text="Stressed"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:layout_below="@id/guilty"
+                    android:layout_toRightOf="@id/angry"
+                    android:layout_alignLeft="@id/lonely"/></RelativeLayout>
 
 
-        </RadioGroup>
+
+
 
         <TextView
             android:id="@+id/feelingb"
@@ -147,72 +168,76 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/userEvent"
             android:layout_weight="3"
-            android:background="#a3a9ed"
+            android:background="#eda5a1"
             android:text="But also a little:" />
 
-        <RadioGroup
-            android:id="@+id/radioGroupb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/feeling"
-            android:paddingLeft="200dp"
-            android:paddingRight="20dp">
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/happyb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/happy"
+                android:button="@drawable/happy_button"
                 android:text="Happy"
-                android:textSize="18dp" />
+                android:textSize="18dp"/>
 
             <RadioButton
                 android:id="@+id/sadb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/sad"
+                android:button="@drawable/sad_button"
                 android:text="Sad"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_toRightOf="@id/happyb"
+                android:layout_marginLeft="100dp"/>
 
             <RadioButton
                 android:id="@+id/lonelyb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/lonely"
+                android:button="@drawable/lonely_button"
                 android:text="Lonely"
-                android:textSize="18dp" />
-
-
+                android:textSize="18dp"
+                android:layout_toRightOf="@id/sadb"
+                android:layout_marginLeft="100dp"/>
             <RadioButton
                 android:id="@+id/nervousb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/nervous"
+                android:button="@drawable/nervous_button"
                 android:text="Nervous"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_below="@id/happyb"/>
 
             <RadioButton
                 android:id="@+id/excitedb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/excited"
+                android:button="@drawable/excited_button"
                 android:text="Excited"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_toRightOf="@id/nervousb"
+                android:layout_below="@id/sadb"
+                android:layout_alignLeft="@id/sadb"/>
 
             <RadioButton
                 android:id="@+id/guiltyb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/guilty"
+                android:button="@drawable/guilty_button"
                 android:text="Guilty"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_toRightOf="@id/excitedb"
+                android:layout_below="@id/lonelyb"
+                android:layout_alignLeft="@id/lonelyb"/>
 
 
             <RadioButton
@@ -220,28 +245,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/embarrassed"
+                android:button="@drawable/embarrassed_button"
                 android:text="Embarrassed"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_below="@id/nervousb"/>
 
             <RadioButton
                 android:id="@+id/angryb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/angry"
+                android:button="@drawable/angry_button"
                 android:text="Angry"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:layout_toRightOf="@id/embarrassedb"
+                android:layout_below="@id/excitedb"
+                android:layout_alignLeft="@id/sadb"/>
 
             <RadioButton
                 android:id="@+id/stressedb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:button="@drawable/stressed"
+                android:button="@drawable/stressed_button"
                 android:text="Stressed"
-                android:textSize="18dp" />
-        </RadioGroup>
+                android:textSize="18dp"
+                android:layout_below="@id/guiltyb"
+                android:layout_toRightOf="@id/angryb"
+                android:layout_alignLeft="@id/lonelyb"/></RelativeLayout>
 
 
         <TextView

@@ -1,106 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date: "
-            style="@style/questions"/>
-        <TextView
-            android:id="@+id/event"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="What Happened?"
-            style="@style/questions"/>
-        <TextView
-            android:id="@+id/userEvent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/feeling"
-            android:text="What were you mainly feeling?"
-            style="@style/questions"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userFeeling"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/feelingb"
-            android:text="And also a little:"
-            style="@style/questions"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userFeelingb"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rate"
-            android:text="Rate it 1-10"
-            style="@style/questions"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userRate"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/action"
-            android:text="What did you do?"
-            style="@style/questions"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userAction"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/thought"
-            android:text="What were you thinking?"
-            style="@style/questions"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userThought"
-            style="@style/answers"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/help"
-            android:text="Did your thoughts help? "
-            style="@style/questions"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Date: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What Happened?"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
+        android:id="@+id/userEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What were you mainly feeling?"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
+        android:id="@+id/userFeeling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/feelingb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="And also a little:"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
+        android:id="@+id/userFeelingb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate it 1-10"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
+        android:id="@+id/userRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What did you do?"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
+        android:id="@+id/userAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/thought"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What were you thinking?"
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456"
+       />
+
+    <TextView
+        android:id="@+id/userThought"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Did your thoughts help? "
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
         android:id="@+id/yesNo"
-        style="@style/answers"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/nextThoughts"
-            android:text="What will you think or do next time? "
-            style="@style/questions"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/nextThoughts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What will you think or do next time? "
+        android:textColor="#123456"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#123456" />
+
+    <TextView
         android:id="@+id/userNextThoughts"
-        style="@style/answers"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"/>
 
 
-
-
-
-    </LinearLayout>
+</LinearLayout>

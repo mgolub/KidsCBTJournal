@@ -1,13 +1,11 @@
 package golub.kidscbtjournal;
 
-import golub.kidscbtjournal.MainActivity;
 import java.io.Serializable;
-import java.util.GregorianCalendar;
 
 /**
  * Created by Hindy on 1/4/2016.
  */
-public class JournalEntry implements Serializable{
+public class JournalEntry implements Serializable {
 
     private String date;
     private String event;
@@ -24,7 +22,7 @@ public class JournalEntry implements Serializable{
         return yesNo;
     }
 
-    public JournalEntry(String date, String event, String feeling, String feelingb, int rate, String action, String thought, String yesNo, String nextThought){
+    public JournalEntry(String date, String event, String feeling, String feelingb, int rate, String action, String thought, String yesNo, String nextThought) {
         this.date = date;
         this.event = event;
         this.feeling = feeling;
@@ -35,7 +33,6 @@ public class JournalEntry implements Serializable{
         this.yesNo = yesNo;
 
         this.nextThought = nextThought;
-
 
 
     }
@@ -64,6 +61,7 @@ public class JournalEntry implements Serializable{
     public String getThought() {
         return thought;
     }
+
     public String getFeelingb() {
         return feelingb;
     }
