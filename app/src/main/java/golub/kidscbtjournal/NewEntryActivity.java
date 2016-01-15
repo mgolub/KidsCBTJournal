@@ -401,6 +401,7 @@ public class NewEntryActivity extends AppCompatActivity {
 
 
         TextView help = (TextView) findViewById(R.id.help);
+
         final RadioGroup yesNo = (RadioGroup) findViewById(R.id.yesNo);
         yesNo.clearCheck();
 
@@ -412,32 +413,39 @@ public class NewEntryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String event = userEvent.getText().toString();
+                String feeling = " ";
+                String feelingb = " ";
+                String yesNo = " ";
 
                 //RadioButton rb = (RadioButton)radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
                 // String feeling = rb.getText().toString();
-                String feeling = checkedRadioButton.getText().toString();
-
+                if (checkedRadioButton != null) {
+                    feeling = checkedRadioButton.getText().toString();
+                }
                 //RadioButton rb2 = (RadioButton)radioGroupb.findViewById(radioGroupb.getCheckedRadioButtonId());
                 // String feelingb = rb2.getText().toString();
-                String feelingb = checkedRadioButton2.getText().toString();
-
+                if (checkedRadioButton2 != null) {
+                    feelingb = checkedRadioButton2.getText().toString();
+                }
                 String action = userAction.getText().toString();
                 String thought = userThought.getText().toString();
 
-                RadioButton answer = (RadioButton) yesNo.findViewById(yesNo.getCheckedRadioButtonId());
-                String yesNo = answer.getText().toString();
+               // RadioButton answer = (RadioButton) yesNo.findViewById(yesNo.getCheckedRadioButtonId());
+               // yesNo = answer.getText().toString();
                 String nextThought = userNextThoughts.getText().toString();
 
                 Date today = Calendar.getInstance().getTime();
                 SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy  hh:mm");
                 String date = format.format(today);
 
-                database.insertEntry(date, event, feeling, feelingb, String.valueOf(value), action, thought, yesNo, nextThought);
+                if (!feeling.equals(" ")|| !feelingb.equals(" ") || !yesNo.equals(" ")) {
+                    database.insertEntry(date, event, feeling, feelingb, String.valueOf(value), action, thought, yesNo, nextThought);
 
-                finish();
+                    finish();
+                }
 
             }
         });
-
     }
+
 }
